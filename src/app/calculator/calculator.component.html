@@ -1,1 +1,7 @@
-<p>calculator works!</p>
+<div class="calculatorBox">
+    <div class="resultCalcul">{{ calcVal }}</div>
+    <div class="allButtonsCalc" >
+        <button *ngFor="let btn of calcBtns" class="buttonCalc" [ngClass]="{'operator': isOperator(btn)}" (click)="handleClick(btn)"> {{btn}}
+        </button>
+    </div>
+</div>
